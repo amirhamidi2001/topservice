@@ -8,7 +8,7 @@ import FeaturedServices from "./components/FeaturedServices";
 import FeaturedAgents from "./components/FeaturedAgents";
 import Testimonials from "./components/Testimonials";
 import WhyUs from "./components/WhyUs";
-import RecentBlog from "./components/RecentBlog";
+// import RecentBlog from "./components/RecentBlog";
 import CallToAction from "./components/CallToAction";
 import ContactInfo from "./components/ContactInfo";
 import Footer from "./components/Footer";
@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-teal-50">
+    <div className="bg-indigo-50">
       <Header />
       <Hero />
       <About />
@@ -32,7 +32,7 @@ function App() {
       <FeaturedAgents />
       <Testimonials />
       <WhyUs />
-      <RecentBlog />
+      {/* <RecentBlog />/ */}
       <CallToAction />
       <ContactInfo />
       <Footer />

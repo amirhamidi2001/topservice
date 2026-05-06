@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-teal-950 text-teal-300 py-10">
+    <footer className="bg-indigo-950 text-indigo-300 py-10">
       <div className="container mx-auto px-4 text-center">
         <div className="flex flex-wrap justify-center gap-6 mb-4">
           <a href="#home" className="hover:text-white">خانه</a>
@@ -12,7 +12,7 @@ const Footer = () => {
           <a href="#blog" className="hover:text-white">مقالات</a>
           <a href="#contact" className="hover:text-white">تماس</a>
         </div>
-        <div className="border-t border-teal-700 pt-6 text-sm">
+        <div className="border-t border-indigo-700 pt-6 text-sm">
           <p>© {new Date().getFullYear()} تاپ سرویس | تمامی حقوق محفوظ است.</p>
           <p className="mt-2">Developed by <a href="https://amirhamidi.pythonanywhere.com/">Amir Hamidi</a></p>
         </div>

@@ -15,8 +15,8 @@ const Testimonials = () => {
     <section id="testimonials" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-3xl font-bold text-teal-800">نظرات مشتریان</h2>
-          <div className="w-24 h-1 bg-teal-500 mx-auto rounded-full mt-2"></div>
+          <h2 className="text-3xl font-bold text-indigo-800">نظرات مشتریان</h2>
+          <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full mt-2"></div>
         </div>
         <Swiper
           modules={[Autoplay]}
@@ -29,13 +29,13 @@ const Testimonials = () => {
         >
           {testimonials.map((t, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-teal-50 p-6 rounded-2xl shadow-md text-right">
+              <div className="bg-indigo-50 p-6 rounded-2xl shadow-md text-right">
                 <div className="flex text-yellow-400 mb-3">
                   {Array(5).fill(0).map((_, i) => <span key={i}>{i < Math.floor(t.rating) ? "★" : "☆"}</span>)}
                 </div>
-                <p className="text-teal-700 italic">"{t.text}"</p>
-                <h4 className="font-bold text-teal-700 mt-4">{t.name}</h4>
-                <p className="text-sm text-teal-500">{t.location}</p>
+                <p className="text-indigo-700 italic">"{t.text}"</p>
+                <h4 className="font-bold text-indigo-700 mt-4">{t.name}</h4>
+                <p className="text-sm text-indigo-500">{t.location}</p>
               </div>
             </SwiperSlide>
           ))}

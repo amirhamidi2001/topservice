@@ -1,35 +1,22 @@
-/* ابتدا تمام ایمپورت‌های کتابخانه‌های خارجی */
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'aos/dist/aos.css';
 /* @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css'); */
 
-/* سپس دستورات Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* استایل‌های سفارشی در پایین */
 body {
   font-family: 'Tahoma', 'Vazirmatn', sans-serif;
-  @apply bg-teal-50 text-teal-800;
+  @apply bg-indigo-50 text-indigo-800;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* تنظیمات جهت Swiper برای RTL */
 .swiper {
   direction: rtl;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #0d9488; /* teal-600 */
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #0d9488;
 }

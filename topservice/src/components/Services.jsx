@@ -15,17 +15,17 @@ const Services = () => {
     <section id="services" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-2">تخصص‌های ما</h2>
-          <div className="w-24 h-1 bg-teal-500 mx-auto rounded-full"></div>
-          <p className="text-teal-500 mt-4">ما فقط روی لباسشویی تمرکز داریم، پس با اطمینان بسپارید</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-800 mb-2">تخصص‌های ما</h2>
+          <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+          <p className="text-indigo-500 mt-4">ما فقط روی لباسشویی تمرکز داریم، پس با اطمینان بسپارید</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesList.map((service, idx) => (
-            <div key={idx} className="bg-teal-50 rounded-xl p-6 shadow-sm hover:shadow-lg transition duration-300 border-r-4 border-teal-500 group hover:-translate-y-1">
+            <div key={idx} className="bg-indigo-50 rounded-xl p-6 shadow-sm hover:shadow-lg transition duration-300 border-r-4 border-indigo-500 group hover:-translate-y-1">
               <div className="text-4xl mb-3">{service.icon}</div>
-              <h3 className="text-xl font-bold text-teal-800 mb-2">{service.title}</h3>
-              <p className="text-teal-600">{service.desc}</p>
+              <h3 className="text-xl font-bold text-indigo-800 mb-2">{service.title}</h3>
+              <p className="text-indigo-600">{service.desc}</p>
             </div>
           ))}
         </div>

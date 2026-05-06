@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold text-teal-700">
+        <a href="/" className="text-2xl font-bold text-indigo-700">
           TopService
         </a>
 
@@ -18,19 +18,19 @@ const Header = () => {
         </button>
 
         <nav className="hidden md:flex space-x-6 space-x-reverse">
-          <a href="#home" className="hover:text-teal-600">خانه</a>
-          <a href="#about" className="hover:text-teal-600">درباره ما</a>
-          <a href="#featured-properties" className="hover:text-teal-600">تعمیرات ویژه</a>
-          <a href="#services" className="hover:text-teal-600">خدمات</a>
-          <a href="#agents" className="hover:text-teal-600">تکنسین‌ها</a>
-          <a href="#testimonials" className="hover:text-teal-600">نظرات</a>
-          <a href="#blog" className="hover:text-teal-600">مقالات</a>
-          <a href="#contact" className="hover:text-teal-600">تماس</a>
+          <a href="#home" className="hover:text-indigo-600">خانه</a>
+          <a href="#about" className="hover:text-indigo-600">درباره ما</a>
+          <a href="#featured-properties" className="hover:text-indigo-600">تعمیرات ویژه</a>
+          <a href="#services" className="hover:text-indigo-600">خدمات</a>
+          <a href="#agents" className="hover:text-indigo-600">تکنسین‌ها</a>
+          <a href="#testimonials" className="hover:text-indigo-600">نظرات</a>
+          <a href="#blog" className="hover:text-indigo-600">مقالات</a>
+          <a href="#contact" className="hover:text-indigo-600">تماس</a>
         </nav>
 
         <a
           href="#contact"
-          className="bg-teal-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-teal-700 transition"
+          className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-indigo-700 transition"
         >
           درخواست تعمیر
         </a>
