@@ -9,7 +9,6 @@ const Footer = () => {
           <a href="#services" className="hover:text-white">خدمات</a>
           <a href="#agents" className="hover:text-white">تکنسین‌ها</a>
           <a href="#testimonials" className="hover:text-white">نظرات</a>
-          <a href="#blog" className="hover:text-white">مقالات</a>
           <a href="#contact" className="hover:text-white">تماس</a>
         </div>
         <div className="border-t border-indigo-700 pt-6 text-sm">

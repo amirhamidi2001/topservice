@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold text-indigo-700">
+        <a href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent">
           TopService
         </a>
 
@@ -24,13 +24,12 @@ const Header = () => {
           <a href="#services" className="hover:text-indigo-600">خدمات</a>
           <a href="#agents" className="hover:text-indigo-600">تکنسین‌ها</a>
           <a href="#testimonials" className="hover:text-indigo-600">نظرات</a>
-          <a href="#blog" className="hover:text-indigo-600">مقالات</a>
           <a href="#contact" className="hover:text-indigo-600">تماس</a>
         </nav>
 
         <a
           href="#contact"
-          className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-indigo-700 transition"
+          className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-indigo-700 transition"
         >
           درخواست تعمیر
         </a>
@@ -43,7 +42,6 @@ const Header = () => {
             <a href="#services" onClick={() => setIsOpen(false)}>خدمات</a>
             <a href="#agents" onClick={() => setIsOpen(false)}>تکنسین‌ها</a>
             <a href="#testimonials" onClick={() => setIsOpen(false)}>نظرات</a>
-            <a href="#blog" onClick={() => setIsOpen(false)}>مقالات</a>
             <a href="#contact" onClick={() => setIsOpen(false)}>تماس</a>
           </div>
         )}
