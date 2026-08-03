@@ -8,7 +8,7 @@ const About = () => {
               🏆 پیشرو در تعمیرات تخصصی
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">
-              تبدیل رویاهای تعمیراتی به واقعیت
+              تعمیرات لباسشویی در پاکدشت
             </h2>
             <p className="text-indigo-600 mb-6">
               آیا لباسشویی شما دچار مشکل شده؟ نگران نباشید! تیم متخصص تاپ سرویس آماده است تا در سریع‌ترین زمان، مشکل دستگاه شما را به صورت تخصصی و اصولی برطرف کند.
@@ -42,7 +42,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex-1 order-1 lg:order-2" data-aos="fade-right">
-            <img src="assets/img/picture-2.webp" alt="درباره تاپ سرویس" className="rounded-2xl shadow-xl" />
+            <img src="assets/img/logo.webp" alt="درباره تاپ سرویس" className="rounded-2xl shadow-xl" />
           </div>
         </div>
       </div>

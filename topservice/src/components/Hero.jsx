@@ -34,7 +34,7 @@ const Hero = () => {
 
         <div className="flex-1">
           <img
-            src="assets/img/picture-1.webp"
+            src="assets/img/picture-2.webp"
             alt="تعمیر لباسشویی"
             className="rounded-2xl shadow-xl"
           />

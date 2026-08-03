@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import FeaturedProperties from "./components/FeaturedProperties";
 import FeaturedServices from "./components/FeaturedServices";
-import FeaturedAgents from "./components/FeaturedAgents";
+// import FeaturedAgents from "./components/FeaturedAgents";
 import Testimonials from "./components/Testimonials";
 import WhyUs from "./components/WhyUs";
 // import RecentBlog from "./components/RecentBlog";
@@ -29,7 +29,7 @@ function App() {
       <About />
       <FeaturedProperties />
       <FeaturedServices />
-      <FeaturedAgents />
+      {/* <FeaturedAgents /> */}
       <Testimonials />
       <WhyUs />
       {/* <RecentBlog />/ */}
