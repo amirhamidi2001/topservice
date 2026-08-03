@@ -2,7 +2,6 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'aos/dist/aos.css';
-/* @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css'); */
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +10,8 @@
 body {
   font-family: 'Tahoma', 'Vazirmatn', sans-serif;
   @apply bg-indigo-50 text-indigo-800;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 html {

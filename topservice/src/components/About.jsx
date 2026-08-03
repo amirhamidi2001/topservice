@@ -42,7 +42,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex-1 order-1 lg:order-2" data-aos="fade-right">
-            <img src="assets/img/logo.webp" alt="درباره تاپ سرویس" className="rounded-2xl shadow-xl" />
+            <img src="assets/img/picture-2.webp" alt="درباره تاپ سرویس" className="rounded-2xl shadow-xl" />
           </div>
         </div>
       </div>
