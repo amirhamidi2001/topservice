@@ -1,48 +1,62 @@
 import { useState } from "react";
+import { NAV_LINKS } from "../data/content";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center gap-2">
+        <a
+          href="/"
+          className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-indigo-700 to-purple-700 bg-clip-text text-transparent shrink-0"
+        >
           TopService
         </a>
 
-        <button
-          className="block md:hidden text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
-
-        <nav className="hidden md:flex space-x-6 space-x-reverse">
-          <a href="#home" className="hover:text-indigo-600">خانه</a>
-          <a href="#about" className="hover:text-indigo-600">درباره ما</a>
-          <a href="#featured-properties" className="hover:text-indigo-600">تعمیرات ویژه</a>
-          <a href="#services" className="hover:text-indigo-600">خدمات</a>
-          <a href="#agents" className="hover:text-indigo-600">تکنسین‌ها</a>
-          <a href="#testimonials" className="hover:text-indigo-600">نظرات</a>
-          <a href="#contact" className="hover:text-indigo-600">تماس</a>
+        <nav className="hidden md:flex items-center gap-6" aria-label="منوی اصلی">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-indigo-600">
+              {link.label}
+            </a>
+          ))}
         </nav>
 
         <a
           href="#contact"
-          className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-indigo-700 transition"
+          className="hidden md:inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-indigo-700 transition"
         >
           درخواست تعمیر
         </a>
 
+        <button
+          type="button"
+          className="md:hidden text-2xl shrink-0"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? "بستن منو" : "باز کردن منو"}
+        >
+          ☰
+        </button>
+
         {isOpen && (
-          <div className="absolute top-16 right-0 left-0 bg-white shadow-md flex flex-col items-center space-y-3 py-4 md:hidden z-50">
-            <a href="#home" onClick={() => setIsOpen(false)}>خانه</a>
-            <a href="#about" onClick={() => setIsOpen(false)}>درباره ما</a>
-            <a href="#featured-properties" onClick={() => setIsOpen(false)}>تعمیرات ویژه</a>
-            <a href="#services" onClick={() => setIsOpen(false)}>خدمات</a>
-            <a href="#agents" onClick={() => setIsOpen(false)}>تکنسین‌ها</a>
-            <a href="#testimonials" onClick={() => setIsOpen(false)}>نظرات</a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>تماس</a>
+          <div
+            id="mobile-menu"
+            className="absolute top-full inset-x-0 bg-white shadow-md flex flex-col items-center gap-3 py-4 md:hidden z-50"
+          >
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md transition"
+            >
+              درخواست تعمیر
+            </a>
           </div>
         )}
       </div>

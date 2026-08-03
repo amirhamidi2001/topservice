@@ -1,17 +1,18 @@
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import AOS from "aos";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import FeaturedProperties from "./components/FeaturedProperties";
 import FeaturedServices from "./components/FeaturedServices";
-// import FeaturedAgents from "./components/FeaturedAgents";
-import Testimonials from "./components/Testimonials";
 import WhyUs from "./components/WhyUs";
-// import RecentBlog from "./components/RecentBlog";
 import CallToAction from "./components/CallToAction";
 import ContactInfo from "./components/ContactInfo";
 import Footer from "./components/Footer";
+
+// Swiper (used only inside Testimonials) is relatively heavy, so it's split
+// into its own chunk and loaded once the section is about to be rendered.
+const Testimonials = lazy(() => import("./components/Testimonials"));
 
 function App() {
   useEffect(() => {
@@ -29,10 +30,10 @@ function App() {
       <About />
       <FeaturedProperties />
       <FeaturedServices />
-      {/* <FeaturedAgents /> */}
-      <Testimonials />
+      <Suspense fallback={null}>
+        <Testimonials />
+      </Suspense>
       <WhyUs />
-      {/* <RecentBlog />/ */}
       <CallToAction />
       <ContactInfo />
       <Footer />

@@ -1,9 +1,11 @@
+import { ABOUT_CHECKLIST } from "../data/content";
+
 const About = () => {
   return (
     <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="flex-1 order-2 lg:order-1" data-aos="fade-left">
+          <div className="flex-1 order-2 lg:order-1" data-aos="fade-up">
             <div className="inline-block bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full text-sm mb-4">
               🏆 پیشرو در تعمیرات تخصصی
             </div>
@@ -15,34 +17,23 @@ const About = () => {
             </p>
 
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>عیب‌یابی تخصصی و دقیق</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>تعمیر و تامین انواع برد (ایرانی و خارجی)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>تعمیر و تامین موتورهای تسمه‌ای و دایرکت درایو</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>سرویس کامل دیگ لباسشویی</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>رفع نشتی آب و آبریزی</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-indigo-600 text-xl">✓</span>
-                <span>رفع صدا و لرزش لباسشویی</span>
-              </div>
+              {ABOUT_CHECKLIST.map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <span className="text-indigo-600 text-xl">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex-1 order-1 lg:order-2" data-aos="fade-right">
-            <img src="assets/img/picture-2.webp" alt="درباره تاپ سرویس" className="rounded-2xl shadow-xl" />
+          <div className="flex-1 min-w-0 w-full max-w-sm lg:max-w-none mx-auto order-1 lg:order-2" data-aos="fade-up">
+            <img
+              src="/assets/img/picture-2.webp"
+              alt="درباره تاپ سرویس"
+              width={500}
+              height={500}
+              loading="lazy"
+              className="w-full h-auto rounded-2xl shadow-xl"
+            />
           </div>
         </div>
       </div>

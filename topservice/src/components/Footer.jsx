@@ -1,19 +1,24 @@
+import { NAV_LINKS } from "../data/content";
+
 const Footer = () => {
   return (
     <footer className="bg-indigo-950 text-indigo-300 py-10">
       <div className="container mx-auto px-4 text-center">
-        <div className="flex flex-wrap justify-center gap-6 mb-4">
-          <a href="#home" className="hover:text-white">خانه</a>
-          <a href="#about" className="hover:text-white">درباره ما</a>
-          <a href="#featured-properties" className="hover:text-white">تعمیرات ویژه</a>
-          <a href="#services" className="hover:text-white">خدمات</a>
-          <a href="#agents" className="hover:text-white">تکنسین‌ها</a>
-          <a href="#testimonials" className="hover:text-white">نظرات</a>
-          <a href="#contact" className="hover:text-white">تماس</a>
-        </div>
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4" aria-label="منوی فوتر">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-white">
+              {link.label}
+            </a>
+          ))}
+        </nav>
         <div className="border-t border-indigo-700 pt-6 text-sm">
           <p>© {new Date().getFullYear()} تاپ سرویس | تمامی حقوق محفوظ است.</p>
-          <p className="mt-2">Developed by <a href="https://amirhamidi.pythonanywhere.com/">Amir Hamidi</a></p>
+          <p className="mt-2">
+            Developed by{" "}
+            <a href="https://amirhamidi.pythonanywhere.com/" className="hover:text-white underline">
+              Amir Hamidi
+            </a>
+          </p>
         </div>
       </div>
     </footer>

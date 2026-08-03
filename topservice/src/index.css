@@ -1,6 +1,4 @@
 @import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
 @import 'aos/dist/aos.css';
 
 @tailwind base;
@@ -10,8 +8,6 @@
 body {
   font-family: 'Tahoma', 'Vazirmatn', sans-serif;
   @apply bg-indigo-50 text-indigo-800;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 html {

@@ -3,7 +3,7 @@ const ContactInfo = () => {
     <section id="contact" className="py-16 bg-indigo-100">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-6" data-aos="fade-right">
+          <div className="space-y-6" data-aos="fade-up">
             <div className="bg-indigo-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-indigo-800 mb-2">ساعت کاری</h3>
               <p className="text-lg">📅 همه روزه (حتی تعطیلات) <span className="font-bold">۹ صبح تا ۹ شب</span></p>

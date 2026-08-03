@@ -1,28 +1,12 @@
-const FeaturedProperties = () => {
-  const featuredRepairs = [
-    {
-      title: "تعمیر برد اصلی لباسشویی",
-      location: "پاکدشت",
-      specs: ["برد", "گارانتی"],
-      image: "assets/img/picture-3.webp",
-      badge: "ویژه",
-    },
-    {
-      title: "تعویض موتور لباسشویی",
-      location: "پاکدشت",
-      specs: ["موتور", "۱۲ ماه گارانتی"],
-      image: "assets/img/picture-4.webp",
-      badge: "داغ",
-    },
-    {
-      title: "رفع نشتی لباسشویی",
-      location: "پاکدشت",
-      specs: ["نشتی", "لاستیک دور درب"],
-      image: "assets/img/picture-5.webp",
-      badge: "جدید",
-    },
-  ];
+import { FEATURED_REPAIRS } from "../data/content";
 
+const LocationIcon = () => (
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+    <path d="M10 2a6 6 0 00-6 6c0 2.5 3 6 6 10 3-4 6-7.5 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" />
+  </svg>
+);
+
+const FeaturedProperties = () => {
   return (
     <section id="featured-properties" className="py-16 bg-indigo-100">
       <div className="container mx-auto px-4">
@@ -33,23 +17,38 @@ const FeaturedProperties = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {featuredRepairs.map((item, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition" data-aos="fade-up" data-aos-delay={idx * 100}>
+          {FEATURED_REPAIRS.map((item, idx) => (
+            <div
+              key={item.title}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+              data-aos="fade-up"
+              data-aos-delay={idx * 100}
+            >
               <div className="relative">
-                <img src={item.image} alt={item.title} className="w-full h-56 object-cover" />
-                <span className="absolute top-3 right-3 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">{item.badge}</span>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={224}
+                  loading="lazy"
+                  className="w-full h-56 object-cover"
+                />
+                <span className="absolute top-3 right-3 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">
+                  {item.badge}
+                </span>
               </div>
               <div className="p-5 text-right">
                 <h3 className="text-xl font-bold text-indigo-800 mb-2">{item.title}</h3>
                 <div className="flex items-center gap-1 text-indigo-500 text-sm mb-2">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6c0 2.5 3 6 6 10 3-4 6-7.5 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"/></svg>
+                  <LocationIcon />
                   <span>{item.location}</span>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.specs.map((spec, i) => <span key={i} className="bg-indigo-100 text-indigo-600 text-xs px-2 py-1 rounded-full">{spec}</span>)}
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-indigo-700 font-bold text-xl">{item.price}</span>
+                <div className="flex flex-wrap gap-2">
+                  {item.specs.map((spec) => (
+                    <span key={spec} className="bg-indigo-100 text-indigo-600 text-xs px-2 py-1 rounded-full">
+                      {spec}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
