@@ -2,7 +2,7 @@
 
 A fast, single-page marketing website for **TopService**, a specialized washing-machine repair business operating in Pakdasht, Iran. Built with React + Vite, fully in Persian (RTL).
 
-🔗 **Live site:** [topservice.ir](https://topservice.ir)
+🔗 **Live site:** [toopservice](https://toopservice)
 📦 **Repository:** [github.com/amirhamidi2001/topservice](https://github.com/amirhamidi2001/topservice)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -114,11 +114,11 @@ npm run lint
 
 ## Deployment
 
-`npm run build` produces a fully static site (`dist/`), so it can be deployed to any static host — Vercel, Netlify, GitHub Pages, or a plain Nginx/Apache server. No server-side runtime is required. The live site is deployed at [topservice.ir](https://topservice.ir).
+`npm run build` produces a fully static site (`dist/`), so it can be deployed to any static host — Vercel, Netlify, GitHub Pages, or a plain Nginx/Apache server. No server-side runtime is required. The live site is deployed at [toopservice](https://toopservice).
 
 ## Contact
 
-For business inquiries related to TopService, use the contact section on [topservice.ir](https://topservice.ir).
+For business inquiries related to TopService, use the contact section on [toopservice](https://toopservice).
 
 ## License
 

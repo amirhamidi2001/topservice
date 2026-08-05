@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://topservice.ir/sitemap.xml
+Sitemap: https://toopservice/sitemap.xml
